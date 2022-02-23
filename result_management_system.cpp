@@ -11,19 +11,28 @@ using namespace std;
 
 class Staff{
 private:
-    char user_name[50]{};
-    char user_password[50]{};
+    char user_name[50];
+    char user_password[50];
 
 public:
+    Staff(char *username, char *userpassword){
+        strcpy(user_name, username);
+        strcpy(user_password, userpassword);
+    }
+
+    // Getters and setters of password and username
+
     char *get_user_name(){
         return user_name;
     }
+    /*
     void set_user_name(char *name){
         strcpy(user_name, name);
     }
     void set_password(char *password){
         strcpy(user_password, password);
     }
+    */
 
     string first_name, last_name, matric_no, CSC201, CSC205, MTH201, MTH203, GST201, GPA;
     int line_num = 0;
